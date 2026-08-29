@@ -14,7 +14,7 @@ all along, installed on effectively every machine, holding history with
 guarantees the estate had to build deliberately — append-only records,
 tamper-evident identity, provenance on every entry, inheritance across
 generations of workers who never meet. It is the version control system. A git
-repository is an append-only, content-addressed, cryptographically chained
+repository is an append-only, content-addressed, hash-chained
 history store, and every operator that touches code — which is, increasingly,
 every operator — already writes to one daily.
 
@@ -214,7 +214,18 @@ different machine, a different decade, and `retries = 5` under a trailing
 newline is `53d37c74…` in every SHA-1 repository on earth (still the default
 object format; repositories born under the newer SHA-256 format digest the
 same universality with longer names), because the name *is* the content,
-digested. One byte moved, and the name is unrecognizable. The reader who
+digested. One byte moved, and the name is unrecognizable. One honesty the word
+*cryptographically* would owe here, and the reason this book does not spend it
+lightly: SHA-1 is no longer collision-resistant — the 2017 SHAttered result
+constructed two distinct inputs sharing a single SHA-1 — so the store's
+integrity is *operational*, not a cryptographic proof against a resourceful
+forger. Git narrows that gap deliberately: it runs collision detection that
+rejects the known attack class on every object it hashes, and it defines the
+SHA-256 object format as the migration path for environments that need a true
+cryptographic guarantee. What the content-addressed chain buys this book's
+operator is tamper-*evidence* — no accidental or casual alteration of history
+passes unnoticed — which is the property every discipline here rests on, and the
+claim worth making precisely because it is the honest one. The reader who
 worked through the previous volume has seen this instrument before: it is the
 artifact index's content hash, promoted from a column the operator maintains
 to the *addressing scheme of the entire store*. Two consequences matter
@@ -364,8 +375,10 @@ remote) carries a verifiable assertion that the keyholder made this
 object, checked by `verify-commit`/`verify-tag` or `log
 --show-signature` against the fleet's allowed-signers file. The
 register's counsel is layered adoption matched to actual threat. The
-chain itself (chapter 1's hashes) already guarantees *integrity* —
-nobody can alter history unnoticed; signatures add *attribution* — this
+chain itself (chapter 1's hashes) already provides *integrity* in the
+operational sense the content-addressing section drew — no accidental or
+casual alteration passes unnoticed, with SHA-1's collision caveat and the
+SHA-256 migration noted there; signatures add *attribution* — this
 exact lineage vouched for this exact object; and most fleets need
 attribution enforced at exactly two places: annotated release tags
 (the objects strangers consume) and the merge commits of protected

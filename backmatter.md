@@ -84,14 +84,25 @@
 
 The git features this book leans on beyond the ancient core, with the
 versions that introduced them, in one place: `git worktree` 2.5 (2015) ·
-`--porcelain=v2` status 2.11 · `sparse-checkout` command 2.25 ·
-`git maintenance` 2.30 · `bisect --first-parent` 2.29 · `restore`/`switch`
-2.23 · SSH commit/tag signing 2.34 · `rebase --update-refs` 2.38 ·
-`log -L` with `--no-patch` 2.42. Every floor is comfortably below any
+`git tag --format` 2.6 · `core.hooksPath` 2.9 (2016) · `--porcelain=v2`
+status 2.11 · `git branch --format` 2.13 · `%(trailers:key=…,valueonly)`
+in `git log --format` 2.22 (2019) · `restore`/`switch` 2.23 ·
+`sparse-checkout` command 2.25 · `git init -b` / `--initial-branch` 2.28
+(2020) · `git maintenance` and `bisect --first-parent` 2.29 · SSH commit/tag
+signing 2.34 · `rebase --update-refs` 2.38. One floor needs its reason stated,
+because both its flags predate it by years: `git log -L` *with* `--no-patch`
+(`-s`) requires git 2.42. `-L` and `-s` each existed long before, and the
+combined command runs on older git — but until 2.42 `-s` did not clear the
+line-log's own diff output, so only from 2.42 does the pairing actually
+suppress the patch and leave the bare commit line the text relies on (git
+2.42 release notes: the `-s` option of the diff family was corrected to clear
+the formatting options given before it). Every floor is comfortably below any
 currently maintained distribution's git; inherited machines check with one
 `git --version`, and the techniques degrade gracefully (older spellings —
-`checkout` for `restore`, manual stack rebasing for `--update-refs` — are
-noted where the text teaches the modern form).
+`checkout` for `restore`, manual stack rebasing for `--update-refs`,
+`interpret-trailers --parse` for the trailer placeholder, `init` then
+`symbolic-ref HEAD` for `init -b` — are noted where the text teaches the
+modern form).
 
 ## A note on measured outputs
 

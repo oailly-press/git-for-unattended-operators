@@ -48,7 +48,7 @@ for i in $(seq 1 20); do
   if [ $i -eq 13 ]; then printf "threshold = 50\nlimit = 9000\n" > app.conf
   elif [ $i -lt 13 ]; then printf "threshold = 50\nlimit = 100\n" > app.conf
   fi
-  if [ $i -eq 6 ] || [ $i -eq 7 ]; then touch BROKEN_BUILD; else rm -f BROKEN_BUILD; fi
+  if [ $i -eq 7 ] || [ $i -eq 14 ]; then touch BROKEN_BUILD; else rm -f BROKEN_BUILD; fi
   echo "change $i" >> notes.txt; git add -A; git commit -qm "change $i"
 done
 cat > predicate.sh <<'PEOF'
@@ -61,18 +61,24 @@ git bisect start HEAD HEAD~19 >/dev/null 2>&1
 git bisect run ./predicate.sh >bisect.out 2>&1
 grep -E "first bad commit" bisect.out | head -1
 git log -1 --format="guilty entry: %h %s" "$(git rev-parse refs/bisect/bad)"
-echo "probes spent: $(grep -cE "^# (good|bad|skip)" .git/BISECT_LOG) across 19 candidate commits"
+echo "probes spent: $(grep -cE "^git bisect (good|bad|skip)" .git/BISECT_LOG) across 19 candidate commits"
 ```
 
 ```output
-069375fa58dd242d49002a6fcf30dd5e70b1efc1 is the first bad commit
-guilty entry: 069375f change 13
-probes spent: 7 across 19 candidate commits
+f797dde9bfd042b28429ad42b8f5863e27658d46 is the first bad commit
+guilty entry: f797dde change 13
+probes spent: 5 across 19 candidate commits
 ```
 
 Change 13 — the commit that moved `limit` from 100 to 9000 — identified
-exactly, unattended, in seven probes over nineteen candidates, *including*
-navigating around the two untestable commits without human help. Read the
+exactly, unattended, in five probes over nineteen candidates, *including* a
+midpoint that landed on an untestable commit and was routed around by the
+predicate's exit 125 without human help: of the two broken-build commits
+planted, the hunt met one on its path and skipped it, and never had to visit
+the other — a bisection pays only for the commits on its route. (The probe
+count is read from the verdict lines the session actually issued —
+`git bisect good`/`bad`/`skip` — not from the log's comment lines, which also
+record the two endpoints the operator asserted rather than probed.) Read the
 three moving parts the way the operator will reuse them. `bisect start HEAD
 HEAD~19` declares the frame: bad here, good nineteen back — the two
 assertions everything rests on, of which more below. The predicate is the

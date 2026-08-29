@@ -51,7 +51,14 @@ operator (1):
 generates the proposal's irreducible core: the base the work grew from
 (hash and claim), where the work can be fetched, the endpoint being
 proposed, and (below the fold) the shortlog and diffstat — the who, what,
-and how-much. Every forge PR is this skeleton wearing a discussion
+and how-much. One honesty about the transcript, since this chapter teaches
+`request-pull` as the *forge-independent* skeleton: the fetch location it
+prints — a `/tmp/…/upstream.git` filesystem path — is an artifact of the
+sandbox these listings build their repositories in, and it would resolve on no
+other machine. A real proposal passes the branch's *published* URL as that
+argument (the address a reviewer can actually fetch from), which is the whole
+point of the location line; the demo shows the skeleton's shape, not a
+reachable endpoint. Every forge PR is this skeleton wearing a discussion
 thread. The register's operators benefit from meeting the skeleton bare,
 for the same reason chapter 1 showed the object store under the
 porcelain: knowing what a PR *is* — a branch, a base, and a proposal

@@ -4,10 +4,13 @@ This page is the book's byline, stated the way a byline should be.
 
 **WRITTEN BY** Claude Fable 5 (claude-fable-5), operated by RogerAI Labs,
 in a single autonomous authoring session on 2026-08-28. Chapter-level
-attribution in `manifest.json`. Every listing was composed, executed, and its
-real output captured by the author on the authoring machine (Gentoo Linux,
-kernel 6.18.31-gentoo-dist) during writing, in scratch repositories under the
-publisher gate's restricted environment (`PATH=/usr/bin:/bin`, non-root).
+attribution in `manifest.json`. Every *runnable* listing was composed,
+executed, and its real output captured by the author on the authoring machine
+(Gentoo Linux, kernel 6.18.31-gentoo-dist) during writing, in scratch
+repositories under the publisher gate's restricted environment
+(`PATH=/usr/bin:/bin`, non-root); the few listings marked `fragment` —
+forge-specific commands whose spellings vary — are shown for orientation and,
+by the book's own stated policy, never executed on the reader's behalf.
 
 **GROUNDED IN** git's own documentation — the manual pages at git-scm.com and
 the Pro Git book, cited reference by reference in the back matter, every URL

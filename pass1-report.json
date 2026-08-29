@@ -2,23 +2,227 @@
   "gate": "pass1",
   "version": "1.0",
   "date": "2026-08-28",
-  "book_dir": ".",
+  "book_dir": "/tmp/rev-git",
   "verdict": "PASS",
   "reject_count": 0,
-  "warn_count": 0,
-  "findings": [],
+  "warn_count": 29,
+  "findings": [
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch01-the-other-ledger.md:62"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch01-the-other-ledger.md:192"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch01-the-other-ledger.md:247"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch01-the-other-ledger.md:280"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch02-the-commit-as-a-unit-of-meaning.md:52"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch02-the-commit-as-a-unit-of-meaning.md:92"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch02-the-commit-as-a-unit-of-meaning.md:162"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch02-the-commit-as-a-unit-of-meaning.md:265"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch02-the-commit-as-a-unit-of-meaning.md:319"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch03-reading-history-as-evidence.md:43"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch03-reading-history-as-evidence.md:79"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch03-reading-history-as-evidence.md:115"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch03-reading-history-as-evidence.md:138"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch03-reading-history-as-evidence.md:190"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch04-diagnosis-by-bisection.md:44"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch05-parallel-operators.md:29"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch05-parallel-operators.md:67"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch05-parallel-operators.md:113"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch05-parallel-operators.md:292"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch06-history-is-append-only-for-you.md:39"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch06-history-is-append-only-for-you.md:83"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch06-history-is-append-only-for-you.md:211"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch07-gates-at-the-threshold.md:31"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch07-gates-at-the-threshold.md:95"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch07-gates-at-the-threshold.md:137"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch07-gates-at-the-threshold.md:225"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch08-the-handoff-is-a-pull-request.md:20"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch08-the-handoff-is-a-pull-request.md:75"
+    },
+    {
+      "gate": "code",
+      "severity": "warn",
+      "code": "CODE_UNEXECUTED",
+      "message": "'bash' listing not executed (--no-exec)",
+      "location": "ch08-the-handoff-is-a-pull-request.md:243"
+    }
+  ],
   "measured": {
-    "body_words_measured": 25432,
-    "print_equivalent_pages": 85,
+    "body_words_measured": 25769,
+    "print_equivalent_pages": 86,
     "chapter_words": {
-      "ch01-the-other-ledger.md": 3180,
+      "ch01-the-other-ledger.md": 3338,
       "ch02-the-commit-as-a-unit-of-meaning.md": 3044,
       "ch03-reading-history-as-evidence.md": 3159,
-      "ch04-diagnosis-by-bisection.md": 3163,
+      "ch04-diagnosis-by-bisection.md": 3243,
       "ch05-parallel-operators.md": 3233,
-      "ch06-history-is-append-only-for-you.md": 3301,
+      "ch06-history-is-append-only-for-you.md": 3319,
       "ch07-gates-at-the-threshold.md": 3166,
-      "ch08-the-handoff-is-a-pull-request.md": 3186
+      "ch08-the-handoff-is-a-pull-request.md": 3267
     },
     "padding_metrics": {
       "chapters": {
@@ -55,7 +259,7 @@
           "bullet_share": 0.0
         }
       },
-      "compression_ratio": 0.3605,
+      "compression_ratio": 0.3603,
       "near_duplicate_paragraph_share": 0.0,
       "top_ngram": {
         "ngram": "*draft status: author draft; human verification",
