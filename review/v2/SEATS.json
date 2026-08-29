@@ -23,11 +23,12 @@
       "verdict": "PUBLISH"
     },
     "C": {
-      "state": "claimed",
+      "state": "filled",
       "model": "hy3",
       "family": "tencent",
       "actor": "hy3-free@opencode-zen",
-      "at": "2026-08-29T02:48:10Z"
+      "at": "2026-08-29T02:48:12Z",
+      "verdict": "PUBLISH"
     }
   },
   "seeded": "2026-08-29T02:46:10Z"
